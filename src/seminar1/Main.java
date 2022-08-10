@@ -3,28 +3,32 @@ package seminar1;
 public class Main {
     public static void main(String[] args) {
         FamilyTree tree = new FamilyTree();
-        Person pa = new Person("Sergei","Pavshin","06/07/1979",Gender.MALE);
-        Person ma = new Person("Natalia","Pavshina","22/11/1976",Gender.FEMALE);
-        Person so = new Person("Egor","Pavshin","25/02/2013",Gender.MALE);
-        Person dot = new Person("Lada","Pavshina","14/05/2019",Gender.FEMALE);
-        Person vi = new Person("Viktoriya","Danilova","08/12/2003",Gender.FEMALE);
+        Person human1 = new Person("Name1", "Surname1", "01.01.1992", Gender.MALE);
+        Person human2 = new Person("Name2", "Surname2", "01.01.1994", Gender.FEMALE);
+        Person human3 = new Person("Name3", "Surname3", "01.01.1965", Gender.MALE);
+        Person human4 = new Person("Name4", "Surname4", "01.01.1971", Gender.FEMALE);
+        Person human5 = new Person("Name5", "Surname5", "01.01.1993", Gender.MALE);
+        Person human6 = new Person("Name6", "Surname6", "01.01.2003", Gender.MALE);
+        Person human7 = new Person("Name7", "Surname7", "01.01.1936", Gender.FEMALE);
+        Person human8 = new Person("Name8", "Surname8", "01.01.2018", Gender.MALE);
 
-        tree.addRelationship(pa,ma,Relation.HUSBAND,Relation.WIFE);
-        tree.addRelationship(pa,so,Relation.FATHER,Relation.SON);
-        tree.addRelationship(pa,dot,Relation.FATHER,Relation.DAUGHTER);
-        tree.addRelationship(pa,vi,Relation.DAUGHTER,Relation.DAUGHTER);
+        tree.addRelationship(human1,human2,Relation.HUSBAND,Relation.WIFE);
+        tree.addRelationship(human1,human3,Relation.SON,Relation.FATHER);
+        tree.addRelationship(human1,human8,Relation.FATHER,Relation.SON);
+        tree.addRelationship(human1,human4,Relation.MOTHER,Relation.SON);
+        tree.addRelationship(human1,human5,Relation.BROTHER,Relation.BROTHER);
+        tree.addRelationship(human1,human6,Relation.BROTHER,Relation.BROTHER);
+        tree.addRelationship(human1,human7,Relation.GRANDSON,Relation.GRANDMA);
 
-        tree.addRelationship(ma,so,Relation.MOTHER,Relation.SON);
-        tree.addRelationship(ma,dot,Relation.MOTHER,Relation.DAUGHTER);
-        tree.addRelationship(ma,vi,Relation.MOTHER,Relation.DAUGHTER);
+        tree.addRelationship(human5,human8,Relation.UNCLE,Relation.NEPHEW);
+        tree.addRelationship(human6,human8,Relation.UNCLE,Relation.NEPHEW);
 
-        tree.addRelationship(so,dot,Relation.BROTHER,Relation.SISTER);
-        tree.addRelationship(so,vi,Relation.BROTHER,Relation.SISTER);
+        tree.addRelationship(human2,human8,Relation.MOTHER,Relation.SON);
 
-        tree.addRelationship(dot,vi,Relation.SISTER,Relation.SISTER);
+        tree.addRelationship(human8,human3,Relation.GRANDSON,Relation.GRANDPA);
+
 
         System.out.println("-------------------\n");
-        //System.out.println(tree);
-        Search.getRelation(pa,tree);
+        Search.getRelation(human8,tree);
     }
 }

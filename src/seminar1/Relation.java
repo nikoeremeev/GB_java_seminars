@@ -14,5 +14,7 @@ public enum Relation {
     NEPHEW,
     NIECE,
     HUSBAND,
-    WIFE
+    WIFE,
+    GRANDSON,
+    GRANDDAUGHTER
 }
