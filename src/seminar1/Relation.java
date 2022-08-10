@@ -13,6 +13,6 @@ public enum Relation {
     GRANDPA,
     NEPHEW,
     NIECE,
-    HUSBUND,
+    HUSBAND,
     WIFE
 }
