@@ -24,7 +24,6 @@ public class Main {
         tree.addRelationship(dot,vi,Relation.SISTER,Relation.SISTER);
 
         System.out.println("-------------------\n");
-        //System.out.println(tree);
         Search.getRelation(pa,tree);
     }
 }
