@@ -1,4 +1,4 @@
-package seminar1;
+package seminar1_homework;
 
 public class Search {
     public static void getRelation(Person person, Relation relation, FamilyTree tree) {

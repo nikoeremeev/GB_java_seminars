@@ -1,4 +1,4 @@
-package seminar1;
+package seminar1_homework;
 
 public class Person {
     private final String firstName;

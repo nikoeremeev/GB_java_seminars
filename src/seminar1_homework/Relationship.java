@@ -1,4 +1,4 @@
-package seminar1;
+package seminar1_homework;
 
 public class Relationship {
     private Person human1;

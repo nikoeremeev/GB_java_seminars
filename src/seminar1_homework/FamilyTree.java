@@ -1,4 +1,4 @@
-package seminar1;
+package seminar1_homework;
 
 import java.util.ArrayList;
 import java.util.List;
