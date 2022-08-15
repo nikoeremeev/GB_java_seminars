@@ -1,11 +1,12 @@
 package seminar2_homework;
 
 public class Main {
-    PetLover hu1 = new PetLover("Иван", 20);
-    PetLover hu2 = new PetLover("Петя", 25);
-    PetLover hu3 = new PetLover("Катя", 30);
-    PetLover hu4 = new PetLover("Вова", 40);
+    CatLover hu1 = new CatLover("Иван", 20);
+    CatLover hu2 = new CatLover("Петя", 25);
+    CatLover hu3 = new CatLover("Катя", 30);
+    CatLover hu4 = new CatLover("Вова", 40);
 
-    PetAnimal pet1 = new PetAnimal("Шарик", 5);
-    PetAnimal pet2 = new PetAnimal("Мурка", 1);
+    PetAnimal pet1 = new Dog("Шарик", 5);
+    PetAnimal pet2 = new Cat("Мурка", 1);
+
 }
