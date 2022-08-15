@@ -18,7 +18,6 @@ abstract public class PetAnimal {
     }
 
     abstract public void respond();
-
     @Override
     public String toString() {
         return ("Nickname: "+this.nickName+"; age:"+this.age);
