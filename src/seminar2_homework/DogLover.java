@@ -5,15 +5,17 @@ public class DogLover extends Human implements CallPetAnimal{
     public DogLover(String name, int age){
         super(name, age);
     }
+
+
     @Override
     public void callPetAnimal(PetAnimal pet) {
-        if (pet instanceof Dog){
-            System.out.printf("%s позвал %s по имени\"%s\", домашний питомец ответил:\n", super.getName(), pet.getNickName(),pet.getNickName());
+        if (pet instanceof Dog) {
+            System.out.printf("%s call %s with a whistle, and %s says: ", super.getName(), pet.getNickName(), pet.getNickName());
             pet.respond();
-        }
-        else {
-            System.out.printf("%s позвал %s, но домашний питомец не ответил", super.getName(), pet.getNickName());
-        }
+        } else if (pet instanceof Cat) {
+            System.out.printf("%s call %s with a whistle, and %s says: \"MEOW-MEOW-MEOW!!!\"\n", super.getName(), pet.getNickName(), pet.getNickName());
 
+
+        }
     }
 }

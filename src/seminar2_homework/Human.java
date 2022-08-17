@@ -19,6 +19,6 @@ abstract public class Human {
 
     @Override
     public String toString() {
-        return ("Имя человека: " + this.name+ ", возраст: " + this.age);
+        return ("Human name is: " + this.name+"\n"+ "age: " + this.age);
     }
 }
