@@ -28,4 +28,5 @@ public class Relationship {
         return String.format("%s is %s for %s", this.human1.getFirstname()+" "+this.human1.getSurname(),
                 this.relation, this.human2.getFirstname()+" "+this.human2.getSurname());
     }
+
 }

@@ -1,9 +1,13 @@
 package seminar1_homework;
 
 
+import java.util.Collection;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
+
+
         FamilyTree tree = new FamilyTree();
         Person human1 = new Person("Name1", "Surname1", 30, Gender.MALE);
         Person human2 = new Person("Name2", "Surname2", 27, Gender.FEMALE);
@@ -30,8 +34,9 @@ public class Main {
         tree.addRelationship(human8,human3,Relation.GRANDSON,Relation.GRANDPA);
 
 
-        System.out.println("-------------------\n");
+        System.out.println("-------------------");
         Search.getRelation(human8,tree);
-
+        System.out.println("-------------------\n");
+        System.out.println(tree.getRelationship());
     }
 }
