@@ -3,13 +3,13 @@ package seminar1_homework;
 public class Person {
     private final String firstName;
     private final String surName;
-    private final String birthDate;
+    private final Integer age;
     private final Gender gender;
 
-    public Person(String firstName, String surName, String birthDate, Gender gender) {
+    public Person(String firstName, String surName, Integer birthDate, Gender gender) {
         this.firstName = firstName;
         this.surName = surName;
-        this.birthDate = birthDate;
+        this.age = birthDate;
         this.gender = gender;
     }
 
@@ -21,16 +21,19 @@ public class Person {
         return this.surName;
     }
 
-    public String getBirthdate() {
-        return this.birthDate;
+    public Integer getAge() {
+        return this.age;
     }
 
     public Gender getGender() {
         return this.gender;
     }
 
+    public int compareTo(Person human) {
+        return this.age - human.age;
+    }
     @Override
     public String toString() {
-        return String.format("%s %s %s %s", firstName, surName, birthDate, gender);
+        return String.format("%s %s %s %s", firstName, surName, age, gender);
     }
 }
