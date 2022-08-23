@@ -1,8 +1,5 @@
-package seminar1_homework;
+package seminar3_homework;
 
-
-import java.util.Collection;
-import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +15,7 @@ public class Main {
         Person human7 = new Person("Name7", "Surname7", 86, Gender.FEMALE);
         Person human8 = new Person("Name8", "Surname8", 3, Gender.MALE);
 
-        tree.addRelationship(human1,human2,Relation.HUSBAND,Relation.WIFE);
+        tree.addRelationship(human1,human2, Relation.HUSBAND,Relation.WIFE);
         tree.addRelationship(human1,human3,Relation.SON,Relation.FATHER);
         tree.addRelationship(human1,human8,Relation.FATHER,Relation.SON);
         tree.addRelationship(human1,human4,Relation.MOTHER,Relation.SON);
@@ -33,8 +30,8 @@ public class Main {
 
         tree.addRelationship(human8,human3,Relation.GRANDSON,Relation.GRANDPA);
 
-        System.out.println("-------------------");
 
+        System.out.println("-------------------");
         Search.getRelation(human8,tree);
         System.out.println("-------------------\n");
         System.out.println(tree.getRelationship());
