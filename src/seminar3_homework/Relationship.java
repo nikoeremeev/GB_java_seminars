@@ -1,4 +1,6 @@
-package seminar1_homework;
+package seminar3_homework;
+
+import java.util.Comparator;
 
 public class Relationship {
     private Person human1;
