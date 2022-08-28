@@ -1,11 +1,17 @@
 package seminar3_homework;
 
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
 
         FamilyTree tree = new FamilyTree();
+        List<Person> people = new ArrayList<Person>();
         Person human1 = new Person("Name1", "Surname1", 30, Gender.MALE);
         Person human2 = new Person("Name2", "Surname2", 27, Gender.FEMALE);
         Person human3 = new Person("Name3", "Surname3", 57, Gender.MALE);
@@ -14,6 +20,16 @@ public class Main {
         Person human6 = new Person("Name6", "Surname6", 19, Gender.MALE);
         Person human7 = new Person("Name7", "Surname7", 86, Gender.FEMALE);
         Person human8 = new Person("Name8", "Surname8", 3, Gender.MALE);
+
+        people.add(human1);
+        people.add(human2);
+        people.add(human3);
+        people.add(human4);
+        people.add(human5);
+        people.add(human6);
+        people.add(human7);
+        people.add(human8);
+
 
         tree.addRelationship(human1,human2, Relation.HUSBAND,Relation.WIFE);
         tree.addRelationship(human1,human3,Relation.SON,Relation.FATHER);
@@ -30,10 +46,18 @@ public class Main {
 
         tree.addRelationship(human8,human3,Relation.GRANDSON,Relation.GRANDPA);
 
+        System.out.println(people);
+
+        Comparator agePeopleComparator = new FamilyTree();
+        Collections.sort(people, agePeopleComparator);
+
+        System.out.println(people);
 
         System.out.println("-------------------");
-        Search.getRelation(human8,tree);
+      //  Search.getRelation(human8,tree);
+      //  System.out.println(tree.getRelationship());
+        //Collections.sort(tree.);
         System.out.println("-------------------\n");
-        System.out.println(tree.getRelationship());
+
     }
 }

@@ -1,9 +1,10 @@
 package seminar3_homework;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-public class FamilyTree {
+public class FamilyTree implements Comparator<Person> {
     private List<Relationship> link=new ArrayList<>();
 
     public List<Relationship> getRelationship() {
@@ -27,5 +28,10 @@ public class FamilyTree {
             result+=el+"\n";
         }
         return result;
+    }
+
+    @Override
+    public int compare(Person o1, Person o2) {
+        return o1.getAge() - o2.getAge();
     }
 }

@@ -1,7 +1,7 @@
 package seminar3_homework;
 
 
-public class Person {
+public class Person implements Comparable<Person>{
     private final String firstName;
     private final String surName;
     private final Integer age;
@@ -36,4 +36,8 @@ public class Person {
     }
 
 
+    @Override
+    public int compareTo(Person o) {
+        return this.getAge() - o.getAge();
+    }
 }
