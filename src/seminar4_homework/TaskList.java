@@ -13,6 +13,9 @@ public class TaskList {
     public static void add(Task task) {
         tasks.add(task);
     }
+    public static void addAll(List<Task> tasks) {
+        tasks.addAll(tasks);
+    }
 
     public static Integer getTaskById(int id) {
         int i = 0;
