@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class AddTask {
     Scanner sc = new Scanner(System.in);
 
-    public void addTask() {
+    public void AddTask() {
         boolean repeatInput = true;
         String author;
         String description = new String();
