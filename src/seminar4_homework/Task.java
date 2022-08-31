@@ -24,6 +24,7 @@ public class Task {
         this.id = ++idCount;
     }
 
+
     public LocalDate getCreateDate() {
         return createDate;
     }
@@ -66,10 +67,9 @@ public class Task {
                 '}';
     }
 
-    public void print(Task task, int priority) {
+    public static void print(Task task) {
 
         System.out.println("------------------------------------------------------");
-        System.out.printf("Priority (0 - the highest): %d\n", priority);
         System.out.printf("Task ID: \t\t\t\t\t%d\n", task.getId());
         System.out.printf("Days to Deadline: \t\t\t%s\n",
                 task.getDeadline().toEpochDay() - LocalDate.now().toEpochDay());

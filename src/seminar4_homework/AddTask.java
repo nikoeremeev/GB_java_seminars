@@ -5,9 +5,9 @@ import java.time.LocalTime;
 import java.util.Scanner;
 
 public class AddTask {
-    Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
-    public void AddTask() {
+    public static void addTask() {
         boolean repeatInput = true;
         String author;
         String description = new String();
@@ -29,9 +29,9 @@ public class AddTask {
         System.out.println("Input priority of the task");
         priority = sc.nextLine();
         TaskPriority taskPriority = TaskPriority.valueOf(priority);
-        String time = String.valueOf(LocalTime.now().getHour()) + ":" + String.valueOf(LocalTime.now().getMinute());
+        String time = LocalTime.now().getHour() + ":" + LocalTime.now().getMinute();
         TaskList.add(new Task(LocalDate.now(), LocalTime.parse(time), deadline, author, description, taskPriority));
-
+        Task.print(new Task(LocalDate.now(), LocalTime.parse(time), deadline, author, description, taskPriority));
     }
 
 }

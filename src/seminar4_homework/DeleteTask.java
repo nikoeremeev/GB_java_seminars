@@ -4,10 +4,12 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Scanner;
 
-public class DeleteTask {
-        Scanner sc = new Scanner(System.in);
+import static seminar4_homework.TaskList.getTaskById;
 
-        private void DeleteTask() {
+public class DeleteTask {
+        static Scanner sc = new Scanner(System.in);
+
+        public static void deleteTask() {
             boolean repeatInput = true;
             int id = -1;
             while (repeatInput) {
