@@ -14,4 +14,11 @@ public class UserMessage extends Message{
     public Integer getMessageID() {
         return messageID;
     }
+
+    @Override
+    public String toString() {
+        return "Message ID: " + getMessageID()+ ";\n" +
+                user +
+                "User message text is:" + text + "\n";
+    }
 }
