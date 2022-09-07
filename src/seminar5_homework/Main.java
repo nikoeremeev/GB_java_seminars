@@ -12,6 +12,8 @@ public class Main {
         UserMessage m = new UserMessage(1, new Date(),h,"TEXT");
         System.out.print(m);
         System.out.print("--------------------------------------------------------------\n");
+        UsersList usersList = new UsersList();
+        usersList.addUser(h);
         System.out.print("--------------------------------------------------------------\n");
     }
 
