@@ -21,7 +21,7 @@ public class UsersList {
         return temp;
     }
     public void printUsersList() {
-        System.out.println("User NickName" +"  |  "+ "User age" +"  |  "+ "User e-mail" +"  |  "+  "User Role");
+        System.out.println("User nickname" +"  |  "+ "User age" +"  |  "+ "User e-mail" +"  |  "+  "User type");
         for (UserCategory item : userList) {
             System.out.println("        "+item.getNickName()+"   |   "+item.getUserAge()+"   |   "+item.getEmailAddress()+"   |   "+item.getUserType()+"\n");
 
