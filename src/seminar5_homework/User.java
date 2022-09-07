@@ -11,16 +11,17 @@ public abstract class User {
         User.emailAddress = emailAddress;
     }
 
-    public static String getNickName(String userNickName) {
-        return nickName;
+    public  String getNickName(User user) {
+        return user.nickName;
     }
 
-    public static String getEmailAddress(String userEmailAddress) {
-        return emailAddress;
+    public  String getEmailAddress(User user) {
+        return user.emailAddress;
     }
 
-    public static Integer getUserAge(Integer userAge) {
-        return age;
+    public  Integer getUserAge(User user) {
+        return user.age;
     }
+
 
 }
