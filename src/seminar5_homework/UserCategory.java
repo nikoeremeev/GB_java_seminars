@@ -12,8 +12,15 @@ public class UserCategory extends User {
         return userType;
     }
 
-    public String getUserNickName(UserCategory userCategory){
-        return getNickName(userCategory);
+    public String getUserNickName(){
+        return super.getNickName();
     }
 
+    @Override
+    public String toString() {
+        return "User NickName is: " + getNickName()+ ";\n" +
+                "User age is: " + getUserAge()+ ";\n" +
+                "User e-mail: " + getEmailAddress()+ ";\n" +
+                "User Role: " + getUserType() + "\n";
+    }
 }
