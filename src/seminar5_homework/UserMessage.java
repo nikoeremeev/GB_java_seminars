@@ -15,9 +15,16 @@ public class UserMessage extends Message{
         return messageID;
     }
 
+    public UserCategory getUser(){
+        return user;
+    }
+    public String getMessageText() {
+
+        return text;
+    }
     @Override
     public String toString() {
-        return "Message ID: " + getMessageID()+ ";\n" +
+        return "Message ID: " + messageID + ";\n" +
                 user +
                 "User message text is:" + text + "\n";
     }

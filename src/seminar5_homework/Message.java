@@ -4,10 +4,10 @@ import java.util.Date;
 
 public abstract class Message {
     Date date;
-    User user;
+    UserCategory user;
     String text;
 
-    public Message(Date date, User user, String text){
+    public Message(Date date, UserCategory user, String text){
         this.date = date;
         this.user = user;
         this.text = text;
