@@ -18,9 +18,7 @@ public class UsersList {
                 temp = item;
             }
         }
-
         return temp;
-
     }
     public void printUsersList() {
         System.out.println("User NickName" +"  |  "+ "User age" +"  |  "+ "User e-mail" +"  |  "+  "User Role");
