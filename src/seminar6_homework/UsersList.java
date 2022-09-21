@@ -20,7 +20,7 @@ public class UsersList {
                 }
             }
         } catch (Exception e) {
-
+            System.out.println("ERROR for delete");
         }
 
     }
