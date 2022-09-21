@@ -3,9 +3,9 @@ package seminar6_homework;
 import java.util.Date;
 
 public abstract class Message {
-    Date date;
-    UserCategory user;
-    String text;
+    public Date date;
+    public UserCategory user;
+    public String text;
 
     public Message(Date date, UserCategory user, String text){
         this.date = date;
